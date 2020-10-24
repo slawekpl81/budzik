@@ -1,3 +1,4 @@
+#!/home/slawekj/Documents/budzik/venv/bin/python3
 import sys
 import subprocess
 from datetime import datetime, timedelta
@@ -5,6 +6,7 @@ import time
 from win95.Windows import BudzikWindow
 from budzik.Budzik import Budzik
 from budzik.Alarm import Alarm
+from mplayer.player import PlaySound 
 
 
 if __name__ == '__main__':
@@ -23,6 +25,7 @@ if __name__ == '__main__':
             
         for alarm in alarms:
             if alarm.budzik.alarm:
+                PlaySound.play()
                 budzikWin.alarm(alarm.__str__())
                 alarms.remove(alarm)
                 break
