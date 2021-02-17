@@ -4,7 +4,6 @@ from pygame import mixer
 
 FILE = 'mplayer/astronomia.mp3'
 PATH = os.path.abspath(FILE)
-print(os.path.abspath(FILE))
 
 class PlaySound:
 
@@ -21,4 +20,4 @@ class PlaySound:
 
 
 if __name__ == '__main__':
-    PlaySound.play()
+    PlaySound.play(s_file='astronomia.mp3')
